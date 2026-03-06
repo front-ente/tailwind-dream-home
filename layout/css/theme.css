@@ -1,3 +1,15 @@
 :root {
-  --bg-main: rgb(221, 199, 187);
+  /** theme colors */
+  --clr-primary: rgb(43, 27, 18);
+  --clr-primary-light: hsla(21, 34%, 23%, 1);
+
+  /** element colors */
+  --clr-headline: var(--clr-primary);
+
+  --clr-bg-main: rgb(221, 199, 187);
+
+  /** global spacings & Sizes */
+  --page-spacing-inline: 1.5rem;
+
+  --content-gap: 1.5rem;
 }
