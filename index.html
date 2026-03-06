@@ -4,20 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dream Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header class="page-header">
-      <div class=""></div>
+
+  <body class="bg-[#f9f6f2] antialiased text-[#2d1b14]">
+    <header
+      class="max-w-[1600px] mx-auto px-6 md:px-10 py-6 flex items-center justify-between"
+    >
+      <div
+        class="text-2xl font-extrabold tracking-tight flex items-center gap-1"
+      >
+        <span class="border-2 border-[#2d1b14] px-1">D</span>wello
+      </div>
+
+      <nav class="hidden md:flex gap-12 font-semibold text-lg">
+        <a href="#" class="hover:opacity-70 transition">Home</a>
+        <a href="#" class="hover:opacity-70 transition">Service</a>
+        <a href="#" class="hover:opacity-70 transition">Agents</a>
+        <a href="#" class="hover:opacity-70 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4 md:gap-6">
+        <button class="text-xl">🔍</button>
+        <button class="text-xl">👤</button>
+        <button
+          class="bg-[#2d1b14] text-white px-5 py-2.5 md:px-7 md:py-3 rounded-lg font-semibold hover:opacity-90 transition"
+        >
+          Sign up
+        </button>
+      </div>
     </header>
 
     <!-- START: page-hero-->
-    <section>
-      <div></div>
-    </section>
-    <!-- END: page-hero-->
+    <main class="overflow-x-hidden">
+      <section
+        class="max-w-[1600px] mx-auto px-6 md:px-10 mt-8 md:mt-12 relative md:pb-[50px]"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-[0.8fr_1fr] gap-10 items-center"
+        >
+          <div class="z-10 w-full max-w-xl text-center md:text-left md:pr-10">
+            <h1
+              class="text-4xl md:text-7xl font-extrabold leading-[1.1] mb-6 md:mb-8 tracking-tighter"
+            >
+              Find Your Dream Home
+            </h1>
+            <p
+              class="text-lg md:text-xl mb-8 md:mb-12 leading-relaxed font-medium max-w-[400px] mx-auto md:mx-0 opacity-80"
+            >
+              Explore our curated selection of exquisite properties meticulously
+              tailored to your unique dream home vision.
+            </p>
+            <button
+              class="bg-[#2d1b14] text-white px-10 py-4 md:px-12 md:py-5 rounded-2xl font-bold text-lg md:text-xl hover:scale-105 transition-transform"
+            >
+              Sign up
+            </button>
+          </div>
 
-    <!-- START: filter-->
-    <!-- END: filter-->
+          <div class="relative flex justify-center md:justify-end w-full">
+            <img
+              src="./img.jpg"
+              alt="Modern House"
+              class="w-full max-w-[500px] md:max-w-none object-contain origin-center md:origin-right md:scale-110 mix-blend-multiply"
+            />
+          </div>
+        </div>
+        <!-- END: page-hero-->
+
+        <!-- START: filter-->
+        <form
+          class="relative md:absolute md:-bottom-20 left-0 md:left-1/2 md:-translate-x-1/2 w-full max-w-6xl mt-12 md:mt-0 px-0 md:px-6"
+        >
+          <div
+            class="bg-[#dcc9bc] p-5 md:p-8 lg:p-10 rounded-[2.5rem] flex flex-col md:flex-row gap-4 items-center"
+          >
+            <div
+              class="bg-[#FDFBF9] flex items-center px-6 py-4 rounded-3xl flex-1 w-full border border-transparent focus-within:border-[#2d1b14]/20 transition"
+            >
+              <input
+                type="text"
+                placeholder="Location"
+                class="bg-transparent outline-none w-full font-semibold placeholder:text-gray-400 text-base md:text-lg"
+              />
+              <span class="text-gray-400 ml-2">📍</span>
+            </div>
+
+            <div
+              class="bg-[#FDFBF9] flex items-center px-6 py-4 rounded-3xl flex-1 w-full border border-transparent focus-within:border-[#2d1b14]/20 transition"
+            >
+              <input
+                type="text"
+                placeholder="Type"
+                class="bg-transparent outline-none w-full font-semibold placeholder:text-gray-400 text-base md:text-lg"
+              />
+              <span class="text-gray-400 ml-2">🏠</span>
+            </div>
+
+            <div
+              class="bg-[#FDFBF9] flex items-center px-6 py-4 rounded-3xl flex-1 w-full border border-transparent focus-within:border-[#2d1b14]/20 transition"
+            >
+              <input
+                type="text"
+                placeholder="Price Range"
+                class="bg-transparent outline-none w-full font-semibold placeholder:text-gray-400 text-base md:text-lg"
+              />
+              <span class="text-gray-400 ml-2">💰</span>
+            </div>
+
+            <button
+              type="submit"
+              class="bg-[#2d1b14] text-white px-10 md:px-14 py-4 rounded-2xl font-bold text-lg w-full md:w-auto hover:scale-105 transition"
+            >
+              Sign up
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- END: filter-->
+    </main>
 
     <!-- START: intro :: we-help -->
     <!-- END: intro :: we-help -->
