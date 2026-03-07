@@ -40,17 +40,18 @@
         }
 
         @layer components {
+            .pbs-8 {
+                padding-block-start: 2rem;
+            }
+
             .footer-padding-block {
                 padding-top: clamp(3rem, 7vw, 5.5rem);
                 padding-bottom: clamp(8rem, 2vw, 13.75rem);
             }
-            .pbs-8 {
-                padding-block-start: 2rem;
-            }
         }
 
         @theme {
-            --color-body: var(--clr-primary-light);
+            --color-body: var(--clr-primary-light); /* = text-body */
             --color-headline: var(--clr-primary);
 
             --font-montserrat: "Montserrat", sans-serif;
@@ -125,8 +126,8 @@
       
             <div class="">
                 <span class="footer__nav-title text-headline text-22">About</span>
-                <nav class="nav-footer">
-                    <ul>
+                <nav class="nav-footer mt-4 lg:mt-8">
+                    <ul class="flex flex-col gap-4 lg:gap-8">
                         <li><a class="href="#">Our Story</a></li>
                         <li><a class="href="#">Career</a></li>
                         <li><a class="href="#">Our Team</a></li>
@@ -137,35 +138,33 @@
 
             <div class="">
                 <span class="footer__nav-title text-headline text-22">Support</span>
-                <nav class="nav-footer">
-                    <ul>
-                        <li><a class="href="#">Our Story</a></li>
-                        <li><a class="href="#">Career</a></li>
-                        <li><a class="href="#">Our Team</a></li>
-                        <li><a class="href="#">OResources</a></li>
+                <nav class="nav-footer mt-4 lg:mt-8">
+                    <ul class="flex flex-col gap-4 lg:gap-8">
+                        <li><a class="href="#">FAQ</a></li>
+                        <li><a class="href="#">Contact Us</a></li>
+                        <li><a class="href="#">Help Center</a></li>
+                        <li><a class="href="#">Terms of Service</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="">
                 <span class="footer__nav-title text-headline text-22">Find Us</span>
-                <nav class="nav-footer">
-                    <ul>
-                        <li><a class="href="#">Our Story</a></li>
-                        <li><a class="href="#">Career</a></li>
-                        <li><a class="href="#">Our Team</a></li>
-                        <li><a class="href="#">OResources</a></li>
+                <nav class="nav-footer mt-4 lg:mt-8">
+                    <ul class="flex flex-col gap-4 lg:gap-8">
+                        <li><a class="href="#">Events</a></li>
+                        <li><a class="href="#">Locations</a></li>
+                        <li><a class="href="#">Newsletter</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="">
                 <span class="footer__nav-title text-headline text-22">Our Social</span>
-                <nav class="nav-footer">
-                    <ul>
-                        <li><a class="href="#">Our Story</a></li>
-                        <li><a class="href="#">Career</a></li>
-                        <li><a class="href="#">Our Team</a></li>
-                        <li><a class="href="#">OResources</a></li>
+                <nav class="nav-footer mt-4 lg:mt-8">
+                    <ul class="flex flex-col  gap-4 lg:gap-8">
+                        <li><a class="href="#">Instagram</a></li>
+                        <li><a class="href="#">Facebook</a></li>
+                        <li><a class="href="#">Twitter (x)</a></li>
                     </ul>
                 </nav>
             </div>
