@@ -55,6 +55,42 @@
             padding-bottom: clamp(8rem, 2vw, 13.75rem);
         }
 
+        /** product-card */
+        .product-card__list {
+          @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4;
+        }
+
+        .product-card__item {
+          @apply rounded-[var(--border-radius)] 
+          bg-(--clr-bg-main);
+        }
+
+        .product-card__content {
+          @apply  grid grid-cols-1 md:grid-cols-10 gap-5 p-5;
+        }
+
+        .product-card__img {
+          @apply rounded-t-[var(--border-radius)];
+        }
+
+        .product-card__title {
+          @apply col-span-full font-bold text-20;
+        }
+
+        .product-rooms,
+        .product-dimensions {
+          @apply font-semibold md:col-span-5;
+        }
+
+        .product-price {
+          @apply md:col-span-6;
+        }
+
+        .product-link {
+          @apply md:col-span-4;
+        }
+
+        /** buttons */
         .btn-primary {
           @apply py-4 px-10 bg-(--clr-primary) rounded-[var(--border-radius)] text-white text-18 leading-tight font-semibold px-6 py-4 
           hover:bg-(--clr-primary-light) hover:cursor-pointer 
@@ -62,8 +98,13 @@
           transition;
         }
 
+        .btn--small {
+          @apply py-3 px-6 text-14 ;
+        }
+
+
         h2, .title-2 {
-          @apply text-40 font-bold  text-pretty mb-8;
+          @apply mb-8 text-40 font-bold  text-pretty text-[var(--clr-primary)];
         }
 
         /** form elements*/
@@ -104,7 +145,7 @@
     </style>
   </head>
 
-  <body class="bg-[#f9f6f2] antialiased text-body font-montserrat">
+  <body class="bg-(--clr-bg-body) antialiased text-body font-montserrat">
     <header
       class="max-w-[1600px] mx-auto px-6 md:px-10 py-6 flex items-center justify-between"
     >
@@ -362,6 +403,51 @@
       <!-- END: features :: why choose us -->
 
       <!-- START: products :: popular-items -->
+           <section class="px-(--page-spacing-inline) pt-10 pb-20 bg-(--clr-bg-light)">
+      <div class="grid max-w-6xl mx-auto">
+          <h2 class="text-center">Our Popular Residences</h2>
+          <div class="product-card__list">
+            <div class="product-card__item">
+              <figure>
+                <img class="product-card__img" src="./imgg.png">
+              </figure>
+              <div class="product-card__content">
+                <h3 class="product-card__title">San Francisco, California</h3>
+                <span classs="product-rooms">4&nbsp;Rooms</span>
+                <span class="product-dimensions">3,500 sq ft</span>
+                <span class="product-price">$2,500,000</span>
+                <a class="product-link btn-primary btn--small text-center" href="#">Sign Up</a>
+              </div>
+            </div>
+
+            <div class="product-card__item">
+              <figure>
+                <img class="product-card__img" src="imgg.png" />
+              </figure>
+              <div class="product-card__content">
+                <h3 class="product-card__title">San Francisco, California</h3>
+                <span classs="product-rooms">4&nbsp;Rooms</span>
+                <span class="product-dimensions">3,500 sq ft</span>
+                <span class="product-price">$2,500,000</span>
+                <a class="product-link btn-primary btn--small text-center" href="#">Sign Up</a>
+              </div>
+            </div>
+
+            <div class="product-card__item">
+              <figure>
+                <img class="product-card__img" src="imgg.png" />
+              </figure>
+              <div class="product-card__content">
+                <h3 class="product-card__title">San Francisco, California</h3>
+                <span classs="product-rooms">4&nbsp;Rooms</span>
+                <span class="product-dimensions">3,500 sq ft</span>
+                <span class="product-price">$2,500,000</span>
+                <a class="product-link btn-primary btn--small text-center" href="#">Sign Up</a>
+              </div>
+            </div>
+          </div>
+       </section>
+
       <!-- END: products :: popular-items -->
 
       <!-- START: review-slider :: what people say-->
