@@ -8,34 +8,38 @@
     <link rel="stylesheet" href="./layout/css/theme.css" />
     <style type="text/tailwindcss">
       @font-face {
-          font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-          font-family: "Montserrat";
-          font-style: normal;
-          font-weight: 400;
-          src: url("./layout/fonts/montserrat/montserrat-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-        }
-        @font-face {
-          font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-          font-family: "Montserrat";
-          font-weight: 600;
-          src: url("./layout/fonts/montserrat/montserrat-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-        }
-        /* montserrat-700 - latin */
-        @font-face {
-          font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-          font-family: "Montserrat";
-          font-style: normal;
-          font-weight: 700;
-          src: url("./layout/fonts/montserrat/montserrat-v31-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-        }
-        /* montserrat-800 - latin */
-        @font-face {
-          font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-          font-family: "Montserrat";
-          font-style: normal;
-          font-weight: 800;
-          src: url("./layout/fonts/montserrat/montserrat-v31-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-        }
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./layout/fonts/montserrat/montserrat-v31-latin-regular.woff2")
+          format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: "Montserrat";
+        font-weight: 600;
+        src: url("./layout/fonts/montserrat/montserrat-v31-latin-600.woff2")
+          format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* montserrat-700 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        src: url("./layout/fonts/montserrat/montserrat-v31-latin-700.woff2")
+          format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* montserrat-800 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        src: url("./layout/fonts/montserrat/montserrat-v31-latin-800.woff2")
+          format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
 
       @layer components {
         .search-field-container {
@@ -50,11 +54,6 @@
           padding-block-start: 2rem;
         }
 
-        .footer-padding-block {
-            padding-top: clamp(3rem, 7vw, 5.5rem);
-            padding-bottom: clamp(8rem, 2vw, 13.75rem);
-        }
-
         .btn-primary {
           @apply py-4 px-10 bg-(--clr-primary) rounded-[var(--border-radius)] text-white text-18 leading-tight font-semibold px-6 py-4 
           hover:bg-(--clr-primary-light) hover:cursor-pointer 
@@ -62,7 +61,8 @@
           transition;
         }
 
-        h2, .title-2 {
+        h2,
+        .title-2 {
           @apply text-40 font-bold  text-pretty mb-8;
         }
 
@@ -72,8 +72,7 @@
         }
 
         .field-text {
-          @apply 
-          px-6 py-4 w-full font-semibold text-18 leading-tight text-[var(--clr-primary)] placeholder:text-[var(--clr-primary)] bg-(--clr-bg-main) rounded-[var(--border-radius)] shadow-[var(--feld-shadow)] 
+          @apply px-6 py-4 w-full font-semibold text-18 leading-tight text-[var(--clr-primary)] placeholder:text-[var(--clr-primary)] bg-(--clr-bg-main) rounded-[var(--border-radius)] shadow-[var(--feld-shadow)] 
           hover:outline hover:outline-2 hover:outline-offset-[-2px] hover:outline-[var(--clr-primary)] 
           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--clr-primary)] 
           transform;
@@ -85,6 +84,18 @@
         }
         .check-list__item {
           @apply flex gap-1;
+        }
+
+        /** footer */
+        .footer-padding-block {
+          padding-top: clamp(3rem, 7vw, 5.5rem);
+          padding-bottom: clamp(8rem, 2vw, 13.75rem);
+        }
+
+        .nav-footer__link {
+          @apply relative 
+          after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+          hover:after:bg-current focus-visible:after:bg-current after:transition-colors;
         }
       }
 
@@ -367,111 +378,175 @@
       <!-- START: review-slider :: what people say-->
       <!-- END: review-slider :: what people say-->
 
-    <!-- START: question-block :: -->
-    <section class="px-(--page-spacing-inline)">
-      <div class="grid mx-auto sm:max-w-2xl py-36 text-center">
-        <h2 >Do You Have Any Questions?<br>
-          Get Help From Us</h2>
+      <!-- START: question-block :: -->
+      <section class="px-(--page-spacing-inline)">
+        <div class="grid mx-auto sm:max-w-2xl py-36 text-center">
+          <h2>
+            Do You Have Any Questions?<br />
+            Get Help From Us
+          </h2>
 
           <ul class="check-list">
             <li class="check-list__item">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" fill="currentColor"><path fill="url(#a)" d="M0 0h26v26H0z"/><defs><pattern id="a" width="1" height="1" patternContentUnits="objectBoundingBox"><use xlink:href="#b" transform="scale(.01042)"/></pattern><image xlink:href="data:image/png;base64,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" id="b" width="96" height="96" preserveAspectRatio="none"/></defs></svg>
-              Chat live with our support team</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="26"
+                height="26"
+                fill="currentColor"
+              >
+                <path fill="url(#a)" d="M0 0h26v26H0z" />
+                <defs>
+                  <pattern
+                    id="a"
+                    width="1"
+                    height="1"
+                    patternContentUnits="objectBoundingBox"
+                  >
+                    <use xlink:href="#b" transform="scale(.01042)" />
+                  </pattern>
+                  <image
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAIqUlEQVR4nO1dWYwWRRBuPIliPFHxSDTig0tg/6oRuf6uUdQEFcF/u4cFRDbxwKgPvvImiZIYA4kKckRf5M0jCCYgJOL1oBgFNWDwAEQIGm8SgYUVxNT8/3Ks7PT0zPxz/DtfMgnZZXuqv+qpru6uqhaiRIkSJUqUKFGiRIkSJdLFIOU6tyqJC5XEjzXBT4rwTyXhZ0X4uSJc5FUretado863bdhz24Zo1/E0wWJNsEkT/sJta4l7FOEHiuA5j2DcU0KcIQYgBukqTNcSv9OEx0yPIjioCd7yXHhgqtt+UX+NzqyOvFhTZbYmXKUkdIdpWxNuVQQdLJMYCJg+ccwVSuI7Ick59n9l4GFNsM4jnFMbN+pyfvjf/DNF0BO1XS3xbW/s2EtEK6PzNucGRbgzMknURxkSjvCTVHuaYEenvPla0Yq47/bRlyZJvm7WI2HbDNe5TLQa+BPPnFwKrYTXRCuhg+DezEklu6eDnLtFK4DdPE34ZdaEavtna0u4qL67GW4yXdBJcBP7/GpC+wgl8QlFsCHOJOu3S7BBEz7ObU92nPM8t73CawNFeNTYRhWmiyLD87wzeVIzdPTfDgmqvzZ4QvRk5SEtcW3dBTWQzv9H4lr+m6DJ1CNnplEBErZxH0RRwQsn8yjFV8O2x4swVYVZSsLK+uLs1IUa/y5oodYX/G7zl1SZLYoI13XPUhK/Dx6t0OPJUddHaZ/NSY0qo/mJslXB6HTbrzN9VUrC9jmOc7YoGnyzYTYXy7KWk2UwmyLnYVEkdLnuYCXxh+BO4aE8rDpr7shrjPtGEndxn0QhXE7X8fizDWH7XxQ5Acti/lpht0f45KRJw88VuSWe8NuQ7mG3N7H9apETeO7oKzXBgVDurcRdvPnHc5zIAQb5e+5mV7OvAhaInEFJWGDVB8KdrIjM3FRPOvdoCVtshG6Ynv28hSxyBq9aGaok/m3bH+ZAVXFyaoIyeYrwDWtBTyjgGZFTKMKno/ZLE77JZx3N388PMcEGjJZPcjmJNcCyaYKN0QcXbGeORDNQk84wRbg34qjfzyM/z+T3gmVkWVnmSH0l3MtciSTBM76W8JG9MHCQD9zzaPNDmVoOFjhpy8Pi+TBRL0lLeNRyFBxWEpdPHw9XiYLDq1aGaonP2ipCufhIcp8kwe6QI76Hl/Z5WOEmDe6TJlwaZke2wcXuREwuu1gh7fyKqBtrRYK/gRdqFxWPsase+4WK8BXDzH+kyAcXquqM8aQz1/bvuM+mwyJF8HJsAbWEzQYFPC8KTL6SsK/Rj3m2f68lvBD8FcCm+EI2BOxXAVUYJQpOvj4xmKyUUD/eDFCAxL/iC2qYdPhgRLQA+TqCEvz402AFHIovLMEfQS/hw27RIuRrSyV41UpbsALg99gCm0JKOHpBtBD5+oQHY5yYue8GBWyOL7SEJYaZfoMoALwqOn54eiiXGvaxskxtagnvGSbhxbEFV4TTDFr+J++xlMpi5Icln/vMfQ8enDgttvA80ZiW4XwALwbQyGfwQb2hre4p48dfIJKAkrjaMNuvFQOIfEaIHIdVIik0sk6C5oEezk4RA4T8qRwgZnDPOSgtsc6EeaGWeL8YAOSHifhryoDkFCBDR1bGad+TzlxbItKacPuCwyCD24Z1ImnU87ACX3og6qpYSZgXh5A0yec+Gp0SwjkiaYRxuzhOMyr5+iRiai6OzZvZOS5v1RljaPtIU04A69mNwduvtgpQfciPqoS0yPffJZ1bgu0/HuVAr6jtRzZB/FnamKD+yNeWRKVhdk4G99EURdcUE2SahHlisplwkyBMpUz+8fdKWJnqJJy0G1qTDpp2WbXBHKVpdvqCE0EM1qAn0aRvJZ2upP3eOErwMiTff/8dzoXmw/kEM2vMWxGwJkq7tQhKyJr8XvD2S/C7cXUiL/I34wwJDHE245StHc/A5kfJAPJD8N22IbFfVC/50tztaGWhhDyQn+p2NAcjGTr8bhIdqlmYo6zJ70UjBzlIlpcKdSSpYn4JaZIf5khSSfwi/ksMo5IPphPpTUwlpE1+aofyJncrao5ukkpQGZAfJiyFJ+LYLzERwcFJifQmohKyIj9MYBZbjxRCE5uXbqoMSsiS/FDprRI/a35wLuFR5VZmJNIjCyVkTr5bmWGquMI5Ei0Rnq76KCFL8m3C0xVV7komcU3inqwTNFRDCVmRb5ug4Sd0t7Wdk0mKEgelsn1MOllNsRJSJt9PTmRbL/GQDQeK4MHEhCiT9DD84GuEayaeQc8Jd1xa2OpL6JOmWoSKI12uO1hLmB81TZXNddMStj0XhnNx00iC+Q9szLMSurjMDsGnUfvHBaqanifXOJw3HMkFjRCYL3IKLWF+jH69zimtqQnrEUxRhF9HMUd5TNyu1ROz7c2OhC2JZEPGqxME31gqYaHIGZTEhYUqV3M6RYQuR5+zgk016QwLW7CJS7HlqWDTKeDqgnwYXbiSZYSLzCMefswt8ad35XBXEYr2dfIK17DI4lGfZ+/ttOBiFSE+6aWZyylxeaqr2jTNkckUKcLDvLkVt3Br1Khs9tlNt26wb18IsxMls0Zbli72A6L6KV3s/8y+dPEKk3yJZrrktHj3saDzhBPFu2GNTfFuTqILCpcxhRe2RPHu0OXrCY9yCAdHvfE5K2ffe67zGIe8mGJvgr8uOMK5vH4p/AntIzhr0Y+sk7BkQJSvZ5QXOOQAfB1I1FGsM3pSrQWaBvhinKxJ1eGf5HJ884JGLKVViWOdyQM7+Mot0YrgVWeuL3KTuKuDKjeKVgZnjhjzDSiAdH/hBOtPc5Xh+jhXGfIFn3naIGw2BnmENb4qKuRI7+aL4DhTJygTp/cyT1Zw2Ms8G/cC5GNbOQsX1SMYx1fLagnvMxm919lywTt/bSChM0rVkXqVF5zWuKLkK0X4a2O98ZvfNuEy9s4Ku81QokSJEiVKlChRokQJUVT8B6EVP0C4gCLvAAAAAElFTkSuQmCC"
+                    id="b"
+                    width="96"
+                    height="96"
+                    preserveAspectRatio="none"
+                  />
+                </defs>
+              </svg>
+              Chat live with our support team
+            </li>
             <li class="check-list__item">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" fill="currentColor"><path fill="url(#a)" d="M0 0h26v26H0z"/><defs><pattern id="a" width="1" height="1" patternContentUnits="objectBoundingBox"><use xlink:href="#b" transform="scale(.01042)"/></pattern><image xlink:href="data:image/png;base64,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" id="b" width="96" height="96" preserveAspectRatio="none"/></defs></svg>
-              Browse our FAQ</li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="26"
+                height="26"
+                fill="currentColor"
+              >
+                <path fill="url(#a)" d="M0 0h26v26H0z" />
+                <defs>
+                  <pattern
+                    id="a"
+                    width="1"
+                    height="1"
+                    patternContentUnits="objectBoundingBox"
+                  >
+                    <use xlink:href="#b" transform="scale(.01042)" />
+                  </pattern>
+                  <image
+                    xlink:href="data:image/png;base64,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"
+                    id="b"
+                    width="96"
+                    height="96"
+                    preserveAspectRatio="none"
+                  />
+                </defs>
+              </svg>
+              Browse our FAQ
+            </li>
           </ul>
 
           <form action="#" method="post">
             <fieldset class="fieldset-inline sm:grid-cols-[3fr_1fr]">
               <div class="widget widget-text">
                 <label class="sr-only">E-Mail</label>
-                <input class="field-text" type="text" name="email" id="email" placeholder="Enter your email address...">
+                <input
+                  class="field-text"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email address..."
+                />
               </div>
               <div class="widget widget-submit">
                 <button class="btn-primary sm:w-full">Submit</button>
               </div>
             </fieldset>
           </form>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- END: question-block :: -->
-     </main>
-    <footer class="footer footer-padding-block bg-(--clr-bg-main) px-(--page-spacing-inline) text-18 font-bold">
-      <div class="footer__inner grid mx-auto max-w-6xl 
-  grid-cols-1 
-  sm:grid-cols-2 
-  lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] 
-  gap-x-14 gap-y-8">      
-            <div>
-                <svg
-                width="93"
-                height="29"
-                viewBox="0 0 93 29"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <g clip-path="url(#clip0_1_239)">
-                    <path
-                    d="M1.89472 28.1235L1.89472 7.91298M0 6.01823H24M0 1.13037H14.6957M6.20173 27.5217V10.7217H14.1457C16.0017 10.7217 17.6337 11.0657 19.0417 11.7537C20.4497 12.4417 21.5457 13.4097 22.3297 14.6577C23.1297 15.9057 23.5297 17.3937 23.5297 19.1217C23.5297 20.8337 23.1297 22.3217 22.3297 23.5857C21.5457 24.8337 20.4497 25.8017 19.0417 26.4897C17.6337 27.1777 16.0017 27.5217 14.1457 27.5217H6.20173ZM10.9537 23.7297H13.9537C14.9137 23.7297 15.7457 23.5537 16.4497 23.2017C17.1697 22.8337 17.7297 22.3057 18.1297 21.6177C18.5297 20.9137 18.7297 20.0817 18.7297 19.1217C18.7297 18.1457 18.5297 17.3137 18.1297 16.6257C17.7297 15.9377 17.1697 15.4177 16.4497 15.0657C15.7457 14.6977 14.9137 14.5137 13.9537 14.5137H10.9537V23.7297ZM28.9099 27.5217L24.2779 14.5137H28.5979L32.2699 25.3857H30.2059L34.0219 14.5137H37.9099L41.5819 25.3857H39.5659L43.3579 14.5137H47.3659L42.7339 27.5217H38.3179L35.1979 18.5217H36.5419L33.3259 27.5217H28.9099ZM55.2236 27.7377C53.6876 27.7377 52.3436 27.4497 51.1916 26.8737C50.0556 26.2817 49.1676 25.4817 48.5276 24.4737C47.9036 23.4497 47.5916 22.2897 47.5916 20.9937C47.5916 19.6977 47.8956 18.5457 48.5036 17.5377C49.1276 16.5137 49.9836 15.7217 51.0716 15.1617C52.1596 14.5857 53.3836 14.2977 54.7436 14.2977C56.0236 14.2977 57.1916 14.5617 58.2476 15.0897C59.3036 15.6017 60.1436 16.3617 60.7676 17.3697C61.3916 18.3777 61.7036 19.6017 61.7036 21.0417C61.7036 21.2017 61.6956 21.3857 61.6796 21.5937C61.6636 21.8017 61.6476 21.9937 61.6316 22.1697H51.3356V19.7697H59.2076L57.4796 20.4417C57.4956 19.8497 57.3836 19.3377 57.1436 18.9057C56.9196 18.4737 56.5996 18.1377 56.1836 17.8977C55.7836 17.6577 55.3116 17.5377 54.7676 17.5377C54.2236 17.5377 53.7436 17.6577 53.3276 17.8977C52.9276 18.1377 52.6156 18.4817 52.3916 18.9297C52.1676 19.3617 52.0556 19.8737 52.0556 20.4657V21.1617C52.0556 21.8017 52.1836 22.3537 52.4396 22.8177C52.7116 23.2817 53.0956 23.6417 53.5916 23.8977C54.0876 24.1377 54.6796 24.2577 55.3676 24.2577C56.0076 24.2577 56.5516 24.1697 56.9996 23.9937C57.4636 23.8017 57.9196 23.5137 58.3676 23.1297L60.7676 25.6257C60.1436 26.3137 59.3756 26.8417 58.4636 27.2097C57.5516 27.5617 56.4716 27.7377 55.2236 27.7377ZM63.806 27.5217V9.71367H68.366V27.5217H63.806ZM71.3295 27.5217V9.71367H75.8895V27.5217H71.3295ZM85.3809 27.7377C83.9569 27.7377 82.6929 27.4497 81.5889 26.8737C80.4849 26.2977 79.6129 25.5057 78.9729 24.4977C78.3489 23.4737 78.0369 22.3057 78.0369 20.9937C78.0369 19.6817 78.3489 18.5217 78.9729 17.5137C79.6129 16.5057 80.4849 15.7217 81.5889 15.1617C82.6929 14.5857 83.9569 14.2977 85.3809 14.2977C86.8049 14.2977 88.0689 14.5857 89.1729 15.1617C90.2929 15.7217 91.1649 16.5057 91.7889 17.5137C92.4129 18.5217 92.7249 19.6817 92.7249 20.9937C92.7249 22.3057 92.4129 23.4737 91.7889 24.4977C91.1649 25.5057 90.2929 26.2977 89.1729 26.8737C88.0689 27.4497 86.8049 27.7377 85.3809 27.7377ZM85.3809 24.1137C85.9089 24.1137 86.3729 23.9937 86.7729 23.7537C87.1889 23.5137 87.5169 23.1617 87.7569 22.6977C87.9969 22.2177 88.1169 21.6497 88.1169 20.9937C88.1169 20.3377 87.9969 19.7857 87.7569 19.3377C87.5169 18.8737 87.1889 18.5217 86.7729 18.2817C86.3729 18.0417 85.9089 17.9217 85.3809 17.9217C84.8689 17.9217 84.4049 18.0417 83.9889 18.2817C83.5889 18.5217 83.2609 18.8737 83.0049 19.3377C82.7649 19.7857 82.6449 20.3377 82.6449 20.9937C82.6449 21.6497 82.7649 22.2177 83.0049 22.6977C83.2609 23.1617 83.5889 23.5137 83.9889 23.7537C84.4049 23.9937 84.8689 24.1137 85.3809 24.1137Z"
-                    stroke="#2A1B12"
-                    stroke-width="2.26087"
-                    />
-                </g>
-                <defs>
-                    <clipPath id="clip0_1_239">
-                    <rect width="93" height="29" fill="currentColor" />
-                    </clipPath>
-                </defs>
-                </svg>
-                <p class="pbs-8">Bringing you closer to your dream home, one click at a time.</p>
-            </div>
-      
-            <div class="">
-                <span class="footer__nav-title text-headline text-22">About</span>
-                <nav class="nav-footer mt-4 lg:mt-8">
-                    <ul class="flex flex-col gap-4 lg:gap-8">
-                        <li><a class="href="#">Our Story</a></li>
-                        <li><a class="href="#">Career</a></li>
-                        <li><a class="href="#">Our Team</a></li>
-                        <li><a class="href="#">OResources</a></li>
-                    </ul>
-                </nav>
-            </div>
+      <!-- END: question-block :: -->
+    </main>
+    <footer
+      class="footer footer-padding-block bg-(--clr-bg-main) px-(--page-spacing-inline) text-18 font-bold"
+    >
+      <div
+        class="footer__inner grid mx-auto max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-14 gap-y-8"
+      >
+        <div>
+          <svg
+            width="93"
+            height="29"
+            viewBox="0 0 93 29"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_1_239)">
+              <path
+                d="M1.89472 28.1235L1.89472 7.91298M0 6.01823H24M0 1.13037H14.6957M6.20173 27.5217V10.7217H14.1457C16.0017 10.7217 17.6337 11.0657 19.0417 11.7537C20.4497 12.4417 21.5457 13.4097 22.3297 14.6577C23.1297 15.9057 23.5297 17.3937 23.5297 19.1217C23.5297 20.8337 23.1297 22.3217 22.3297 23.5857C21.5457 24.8337 20.4497 25.8017 19.0417 26.4897C17.6337 27.1777 16.0017 27.5217 14.1457 27.5217H6.20173ZM10.9537 23.7297H13.9537C14.9137 23.7297 15.7457 23.5537 16.4497 23.2017C17.1697 22.8337 17.7297 22.3057 18.1297 21.6177C18.5297 20.9137 18.7297 20.0817 18.7297 19.1217C18.7297 18.1457 18.5297 17.3137 18.1297 16.6257C17.7297 15.9377 17.1697 15.4177 16.4497 15.0657C15.7457 14.6977 14.9137 14.5137 13.9537 14.5137H10.9537V23.7297ZM28.9099 27.5217L24.2779 14.5137H28.5979L32.2699 25.3857H30.2059L34.0219 14.5137H37.9099L41.5819 25.3857H39.5659L43.3579 14.5137H47.3659L42.7339 27.5217H38.3179L35.1979 18.5217H36.5419L33.3259 27.5217H28.9099ZM55.2236 27.7377C53.6876 27.7377 52.3436 27.4497 51.1916 26.8737C50.0556 26.2817 49.1676 25.4817 48.5276 24.4737C47.9036 23.4497 47.5916 22.2897 47.5916 20.9937C47.5916 19.6977 47.8956 18.5457 48.5036 17.5377C49.1276 16.5137 49.9836 15.7217 51.0716 15.1617C52.1596 14.5857 53.3836 14.2977 54.7436 14.2977C56.0236 14.2977 57.1916 14.5617 58.2476 15.0897C59.3036 15.6017 60.1436 16.3617 60.7676 17.3697C61.3916 18.3777 61.7036 19.6017 61.7036 21.0417C61.7036 21.2017 61.6956 21.3857 61.6796 21.5937C61.6636 21.8017 61.6476 21.9937 61.6316 22.1697H51.3356V19.7697H59.2076L57.4796 20.4417C57.4956 19.8497 57.3836 19.3377 57.1436 18.9057C56.9196 18.4737 56.5996 18.1377 56.1836 17.8977C55.7836 17.6577 55.3116 17.5377 54.7676 17.5377C54.2236 17.5377 53.7436 17.6577 53.3276 17.8977C52.9276 18.1377 52.6156 18.4817 52.3916 18.9297C52.1676 19.3617 52.0556 19.8737 52.0556 20.4657V21.1617C52.0556 21.8017 52.1836 22.3537 52.4396 22.8177C52.7116 23.2817 53.0956 23.6417 53.5916 23.8977C54.0876 24.1377 54.6796 24.2577 55.3676 24.2577C56.0076 24.2577 56.5516 24.1697 56.9996 23.9937C57.4636 23.8017 57.9196 23.5137 58.3676 23.1297L60.7676 25.6257C60.1436 26.3137 59.3756 26.8417 58.4636 27.2097C57.5516 27.5617 56.4716 27.7377 55.2236 27.7377ZM63.806 27.5217V9.71367H68.366V27.5217H63.806ZM71.3295 27.5217V9.71367H75.8895V27.5217H71.3295ZM85.3809 27.7377C83.9569 27.7377 82.6929 27.4497 81.5889 26.8737C80.4849 26.2977 79.6129 25.5057 78.9729 24.4977C78.3489 23.4737 78.0369 22.3057 78.0369 20.9937C78.0369 19.6817 78.3489 18.5217 78.9729 17.5137C79.6129 16.5057 80.4849 15.7217 81.5889 15.1617C82.6929 14.5857 83.9569 14.2977 85.3809 14.2977C86.8049 14.2977 88.0689 14.5857 89.1729 15.1617C90.2929 15.7217 91.1649 16.5057 91.7889 17.5137C92.4129 18.5217 92.7249 19.6817 92.7249 20.9937C92.7249 22.3057 92.4129 23.4737 91.7889 24.4977C91.1649 25.5057 90.2929 26.2977 89.1729 26.8737C88.0689 27.4497 86.8049 27.7377 85.3809 27.7377ZM85.3809 24.1137C85.9089 24.1137 86.3729 23.9937 86.7729 23.7537C87.1889 23.5137 87.5169 23.1617 87.7569 22.6977C87.9969 22.2177 88.1169 21.6497 88.1169 20.9937C88.1169 20.3377 87.9969 19.7857 87.7569 19.3377C87.5169 18.8737 87.1889 18.5217 86.7729 18.2817C86.3729 18.0417 85.9089 17.9217 85.3809 17.9217C84.8689 17.9217 84.4049 18.0417 83.9889 18.2817C83.5889 18.5217 83.2609 18.8737 83.0049 19.3377C82.7649 19.7857 82.6449 20.3377 82.6449 20.9937C82.6449 21.6497 82.7649 22.2177 83.0049 22.6977C83.2609 23.1617 83.5889 23.5137 83.9889 23.7537C84.4049 23.9937 84.8689 24.1137 85.3809 24.1137Z"
+                stroke="#2A1B12"
+                stroke-width="2.26087"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_239">
+                <rect width="93" height="29" fill="currentColor" />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="pbs-8">
+            Bringing you closer to your dream home, one click at a time.
+          </p>
+        </div>
 
-            <div class="">
-                <span class="footer__nav-title text-headline text-22">Support</span>
-                <nav class="nav-footer mt-4 lg:mt-8">
-                    <ul class="flex flex-col gap-4 lg:gap-8">
-                        <li><a class="href="#">FAQ</a></li>
-                        <li><a class="href="#">Contact Us</a></li>
-                        <li><a class="href="#">Help Center</a></li>
-                        <li><a class="href="#">Terms of Service</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="">
-                <span class="footer__nav-title text-headline text-22">Find Us</span>
-                <nav class="nav-footer mt-4 lg:mt-8">
-                    <ul class="flex flex-col gap-4 lg:gap-8">
-                        <li><a class="href="#">Events</a></li>
-                        <li><a class="href="#">Locations</a></li>
-                        <li><a class="href="#">Newsletter</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="">
+          <span class="footer__nav-title text-headline text-22">About</span>
+          <nav class="nav-footer mt-4 lg:mt-8">
+            <ul class="flex flex-col gap-4 lg:gap-8">
+              <li><a class="nav-footer__link" href="#">Our Story</a></li>
+              <li><a class="nav-footer__link" href="#">Career</a></li>
+              <li><a class="nav-footer__link" href="#">Our Team</a></li>
+              <li><a class="nav-footer__link" href="#">OResources</a></li>
+            </ul>
+          </nav>
+        </div>
 
-            <div class="">
-                <span class="footer__nav-title text-headline text-22">Our Social</span>
-                <nav class="nav-footer mt-4 lg:mt-8">
-                    <ul class="flex flex-col  gap-4 lg:gap-8">
-                        <li><a class="href="#">Instagram</a></li>
-                        <li><a class="href="#">Facebook</a></li>
-                        <li><a class="href="#">Twitter (x)</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="">
+          <span class="footer__nav-title text-headline text-22">Support</span>
+          <nav class="nav-footer mt-4 lg:mt-8">
+            <ul class="flex flex-col gap-4 lg:gap-8">
+              <li><a class="nav-footer__link" href="#">FAQ</a></li>
+              <li><a class="nav-footer__link" href="#">Contact Us</a></li>
+              <li><a class="nav-footer__link" href="#">Help Center</a></li>
+              <li><a class="nav-footer__link" href="#">Terms of Service</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="">
+          <span class="footer__nav-title text-headline text-22">Find Us</span>
+          <nav class="nav-footer mt-4 lg:mt-8">
+            <ul class="flex flex-col gap-4 lg:gap-8">
+              <li><a class="nav-footer__link" href="#">Events</a></li>
+              <li><a class="nav-footer__link" href="#">Locations</a></li>
+              <li><a class="nav-footer__link" href="#">Newsletter</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="">
+          <span class="footer__nav-title text-headline text-22"
+            >Our Social</span
+          >
+          <nav class="nav-footer mt-4 lg:mt-8">
+            <ul class="flex flex-col gap-4 lg:gap-8">
+              <li><a class="nav-footer__link" href="#">Instagram</a></li>
+              <li><a class="nav-footer__link" href="#">Facebook</a></li>
+              <li><a class="nav-footer__link" href="#">Twitter (x)</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </footer>
   </body>
