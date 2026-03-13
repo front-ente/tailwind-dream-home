@@ -49,6 +49,18 @@
                 padding-top: clamp(3rem, 7vw, 5.5rem);
                 padding-bottom: clamp(8rem, 2vw, 13.75rem);
             }
+
+            .btn-primary {
+              @apply bg-(--clr-primary) text-white text-18 font-semibold py-2 px-4 rounded hover:bg-(--clr-primary-light) py-4 px-10 hover:cursor-pointer transition;
+            }
+
+            h2, .title-2 {
+              @apply text-40 font-bold  text-pretty;
+            }
+
+            .field-text {
+              @apply p-4;
+            }
         }
 
         @theme {
@@ -93,6 +105,7 @@
           Sign up
         </button>
       </div>
+      </header>
     <!-- START: page-hero-->
     <main class="overflow-x-hidden">
       <section
@@ -180,7 +193,6 @@
         </form>
       </section>
       <!-- END: filter-->
-    </main>
 
     <!-- START: intro :: we-help -->
     <!-- END: intro :: we-help -->
@@ -195,10 +207,34 @@
     <!-- END: review-slider :: what people say-->
 
     <!-- START: question-block :: -->
+    <section class="px-(--page-spacing-inline)">
+      <div class="grid mx-auto max-w-6xl text-center">
+        <h2 class="">Do You Have Any Questions?
+          Get Help From Us</h2>
+
+          <ul>
+            <li>Chat live with our support team</li>
+            <li>Browse our FAQ</li>
+          </ul>
+
+          <form>
+            <fieldset class="grid">
+              <div>
+                <label></label>
+                <input class="field-text" type="text" name="email" id="email" placeholder="Enter your email address...">
+              </div>
+              <div>
+                <button class="btn-primary">Submit</button>
+              </div>
+            </fieldset>
+          </form>
+      </div>
+    </section>
+
     <!-- END: question-block :: -->
      </main>
     <footer class="footer footer-padding-block bg-(--clr-bg-main) px-(--page-spacing-inline) text-18 font-bold">
-      <div class="footer__inner grid mx-auto max-w-6xl grid 
+      <div class="footer__inner grid mx-auto max-w-6xl 
   grid-cols-1 
   sm:grid-cols-2 
   lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] 
