@@ -1,12 +1,16 @@
 :root {
   /** theme colors */
-  --clr-primary: rgb(43, 27, 18);
+  --clr-primary: hsla(22, 41%, 12%, 1);
+
   --clr-primary-light: hsla(21, 34%, 23%, 1);
 
   /** element colors */
   --clr-headline: var(--clr-primary);
 
   --clr-bg-main: rgb(221, 199, 187);
+  --clr-bg-light: hsla(25, 86%, 97%, 1);
+
+  --clr-bg-body: hsla(0, 0%, 100%, 1);
 
   /** global spacings & Sizes */
   --page-spacing-inline: 1.5rem;
